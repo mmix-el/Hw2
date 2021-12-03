@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".NavActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:context=".NavActivity">
+
+
+            <Button
+                android:id="@+id/helloWorld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L1.1: Android Studio and Hello World" />
+
+            <Button
+                android:id="@+id/helloToastPtA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L1.2 Part A: Your first interactive UI" />
+
+            <Button
+                android:id="@+id/helloToastPtB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L1.2 Part B: The layout editor" />
+
+            <Button
+                android:id="@+id/scrollingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L1.3: Text and scrolling views" />
+
+            <Button
+                android:id="@+id/learnToHelpYourself"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L1.4: Learn to help yourself" />
+
+            <Button
+                android:id="@+id/twoActivities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L2.1: Activities and intents" />
+
+            <Button
+                android:id="@+id/activityLifecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L2.2: Activity lifecycle and state" />
+
+            <Button
+                android:id="@+id/implicitIntents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L2.3: Implicit intents" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

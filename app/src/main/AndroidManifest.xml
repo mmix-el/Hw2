@@ -11,6 +11,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hw2">
         <activity
+            android:name=".lesson2.ImplicitIntentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lesson2.ActivityLifecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lesson2.TwoActivitiesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lesson1.LearnToHelpYourselfActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lesson1.ScrollingTextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lesson1.HelloToastPtB"
+            android:exported="false" />
+        <activity
+            android:name=".lesson1.HelloToastPtA"
+            android:exported="false" />
+        <activity
+            android:name=".lesson1.HelloWorldActivity"
+            android:exported="false" />
+        <activity
             android:name=".NavActivity"
             android:exported="true">
             <intent-filter>
