@@ -15,11 +15,13 @@ class HelloWorldActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hello_world)
-        Log.i(TAG, "Happy Birthday $friendName!");
+        Log.i(TAG, "Happy Birthday to $friendName")
 
         try {
-            throw Exception("Thrown Exception")
+            // code that may throw an exception
+            throw Exception("An exception has thrown!")
         } catch (e: Exception) {
+            // code for handling the exception
             Log.e(TAG, "Exception logged: ${e.message}")
         }
 
@@ -29,7 +31,6 @@ class HelloWorldActivity : AppCompatActivity() {
         Log.i(TAG, "Info: $message")
         Log.w(TAG, "Warning: $message")
         Log.e(TAG, "Error: $message")
-        Log.wtf(TAG, "WTF: $message")
         Log.println(Log.ASSERT, TAG, "Assert: $message")
     }
 }
