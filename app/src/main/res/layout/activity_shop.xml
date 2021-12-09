@@ -89,6 +89,20 @@
                 android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
                 android:text="Turkey" />
 
+            <EditText
+                android:id="@+id/locationEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edittext_loc" />
+
+            <Button
+                android:id="@+id/open_location_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:onClick="@{shopHandler::openStoreLocation}"
+                android:text="@string/store_address" />
+
         </LinearLayout>
     </ScrollView>
 </layout>

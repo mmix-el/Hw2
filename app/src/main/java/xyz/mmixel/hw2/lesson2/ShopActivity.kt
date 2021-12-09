@@ -1,7 +1,10 @@
 package xyz.mmixel.hw2.lesson2
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import xyz.mmixel.hw2.R
@@ -39,5 +42,16 @@ class ShopActivity : AppCompatActivity() {
         intent.putExtra(EXTRA_PICKED_ITEM, item)
         setResult(RESULT_OK, intent)
         finish()
+    }
+
+    fun openStoreLocation(v: View) {
+        val loc = binding.locationEdittext.text.toString()
+        val addressUri: Uri = Uri.parse("geo:0,0?q=$loc")
+        val intent = Intent(Intent.ACTION_VIEW, addressUri)
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        } else {
+            Log.d("ImplicitIntents", "Can't handle this intent!")
+        }
     }
 }

@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="@string/button_loc"
-        android:onClick="openLocation"/>
+        android:onClick="openStoreLocation"/>
 
     <EditText
         android:id="@+id/share_edittext"
