@@ -1,4 +1,4 @@
-package xyz.mmixel.hw2.lesson2.activitiesandintents
+package xyz.mmixel.hw2.lesson2
 
 import android.content.Intent
 import android.os.Bundle

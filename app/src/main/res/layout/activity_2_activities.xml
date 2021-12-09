@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="xyz.mmixel.hw2.lesson2.activitiesandintents.TwoActivities">
+    tools:context="xyz.mmixel.hw2.lesson2.TwoActivities">
 
     <TextView
         android:id="@+id/text_header_reply"

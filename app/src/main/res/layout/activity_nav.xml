@@ -84,6 +84,13 @@
                 android:onClick="@{(v) -> navHandler.navigate(v.id)}"
                 android:text="Cart Activity" />
 
+            <Button
+                android:id="@+id/oneTwoThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="Activity And Intents Challenge" />
+
         </LinearLayout>
     </ScrollView>
 </layout>

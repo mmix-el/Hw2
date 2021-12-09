@@ -7,7 +7,7 @@
 
         <variable
             name="htHandler"
-            type="xyz.mmixel.hw2.lesson2.activitiesandintents.HelloToastWithIntent" />
+            type="xyz.mmixel.hw2.lesson2.HelloToastWithIntent" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

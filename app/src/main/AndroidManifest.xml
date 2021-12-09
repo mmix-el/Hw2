@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="xyz.mmixel.hw2">
+    package="xyz.mmixel.hw2" >
 
     <application
         android:allowBackup="false"
@@ -8,7 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Hw2">
+        android:theme="@style/Theme.Hw2" >
+        <activity
+            android:name=".lesson2.OneTwoThreeSecond"
+            android:exported="false" />
+        <activity
+            android:name=".lesson2.OneTwoThreeFirst"
+            android:exported="false" />
         <activity
             android:name=".lesson2.CartActivity"
             android:exported="false" />
@@ -16,22 +22,22 @@
             android:name=".lesson2.ShopActivity"
             android:exported="false" />
         <activity
-            android:name=".lesson2.activitiesandintents.HelloToastWithIntentSecond"
+            android:name=".lesson2.HelloToastWithIntentSecond"
             android:exported="false" />
         <activity
-            android:name=".lesson2.activitiesandintents.HelloToastWithIntent"
+            android:name=".lesson2.HelloToastWithIntent"
             android:exported="false" />
         <activity
-            android:name=".lesson2.activitiesandintents.SecondActivity"
+            android:name=".lesson2.SecondActivity"
             android:exported="false"
             android:label="@string/activity2_name"
-            android:parentActivityName=".lesson2.activitiesandintents.TwoActivities">
+            android:parentActivityName=".lesson2.TwoActivities" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".lesson2.activitiesandintents.TwoActivities" />
+                android:value=".lesson2.TwoActivities" />
         </activity>
         <activity
-            android:name=".lesson2.activitiesandintents.TwoActivities"
+            android:name=".lesson2.TwoActivities"
             android:exported="false" />
         <activity
             android:name=".lesson2.ImplicitIntentsActivity"
@@ -59,7 +65,7 @@
             android:exported="false" />
         <activity
             android:name=".NavActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

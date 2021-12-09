@@ -1,4 +1,4 @@
-package xyz.mmixel.hw2.lesson2.activitiesandintents
+package xyz.mmixel.hw2.lesson2
 
 import android.app.Activity
 import android.content.Intent
@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 private val LOG_TAG: String = TwoActivities::class.java.simpleName
-const val EXTRA_MESSAGE = "xyz.mmixel.hw2.lesson2.activitiesandintents.EXTRA_MESSAGE"
+const val EXTRA_MESSAGE = "xyz.mmixel.hw2.lesson2.EXTRA_MESSAGE"
 
 class TwoActivities : AppCompatActivity() {
     private lateinit var messageEditText: EditText
