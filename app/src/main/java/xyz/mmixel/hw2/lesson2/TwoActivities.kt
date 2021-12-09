@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -12,7 +13,7 @@ import xyz.mmixel.hw2.R
 import xyz.mmixel.hw2.databinding.Activity2ActivitiesBinding
 
 private const val LOG_TAG: String = "TwoActivities"
-const val EXTRA_MESSAGE = "xyz.mmixel.hw2.lesson2.EXTRA_MESSAGE"
+const val MY_EXTRA_MESSAGE = "xyz.mmixel.hw2.lesson2.EXTRA_MESSAGE"
 
 /**
  * 2.1 Activities and intents
@@ -22,9 +23,9 @@ class TwoActivities : AppCompatActivity() {
 
     private val startForResult = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
-    ) { result ->
+    ) { result: ActivityResult ->
         if (result.resultCode == Activity.RESULT_OK) {
-            val reply: String? = result.data?.getStringExtra(EXTRA_REPLY)
+            val reply: String? = result.data?.getStringExtra(MY_EXTRA_REPLY)
             with(binding) {
                 replyHeadTextView.visibility = View.VISIBLE
                 replyTextView.text = reply
@@ -65,7 +66,7 @@ class TwoActivities : AppCompatActivity() {
     fun launchSecondActivity(v: View?) {
         Log.d(LOG_TAG, "Button clicked!")
         val intent = Intent(this, SecondActivity::class.java)
-        intent.putExtra(EXTRA_MESSAGE, binding.replyTextView.text)
+        intent.putExtra(MY_EXTRA_MESSAGE, binding.editTextMain.text)
         startForResult.launch(intent)
     }
 

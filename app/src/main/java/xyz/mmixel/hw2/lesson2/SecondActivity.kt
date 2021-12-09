@@ -9,7 +9,7 @@ import xyz.mmixel.hw2.R
 import xyz.mmixel.hw2.databinding.ActivitySecondBinding
 
 private const val LOG_TAG: String = "SecondActivity"
-const val EXTRA_REPLY = "com.example.android.twoActivities.EXTRA_REPLY"
+const val MY_EXTRA_REPLY = "com.example.android.twoActivities.EXTRA_REPLY"
 
 /**
  * 2.1 Activities and intents
@@ -22,20 +22,22 @@ class SecondActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_second)
         binding.saHandler = this
 
-        val message = intent.getStringExtra(EXTRA_MESSAGE)
-
+        val message = intent.getStringExtra(MY_EXTRA_MESSAGE)
         with(binding) {
             receivedText.text = message
             replyButton.setOnClickListener {
-                val replyIntent = Intent()
-                replyIntent.putExtra(EXTRA_REPLY, replyText.text)
-                setResult(RESULT_OK, replyIntent)
-                Log.d(LOG_TAG, "End SecondActivity")
-                finish()
+                replyResult()
             }
         }
     }
 
+    private fun replyResult() {
+        val replyIntent = Intent(this, TwoActivities::class.java)
+        replyIntent.putExtra(MY_EXTRA_REPLY, binding.replyText.text)
+        setResult(RESULT_OK, replyIntent)
+        Log.d(LOG_TAG, "End SecondActivity")
+        finish()
+    }
 
     override fun onStart() {
         super.onStart()
