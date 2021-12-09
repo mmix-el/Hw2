@@ -8,7 +8,7 @@ import xyz.mmixel.hw2.R
 private const val TAG = "HelloWorldActivity"
 
 /**
- *  1.1: Android Studio and Hello World
+ * 1.1: Android Studio and Hello World
  */
 class HelloWorldActivity : AppCompatActivity() {
     private val friendName = "Rama"
