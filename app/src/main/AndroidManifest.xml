@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hw2">
         <activity
+            android:name=".lesson2.activitiesandintents.HelloToastWithIntentSecond"
+            android:exported="false" />
+        <activity
+            android:name=".lesson2.activitiesandintents.HelloToastWithIntent"
+            android:exported="false" />
+        <activity
+            android:name=".lesson2.activitiesandintents.SecondActivity"
+            android:exported="false"
+            android:label="@string/activity2_name"
+            android:parentActivityName=".lesson2.activitiesandintents.TwoActivities">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".lesson2.activitiesandintents.TwoActivities" />
+        </activity>
+        <activity
+            android:name=".lesson2.activitiesandintents.TwoActivities"
+            android:exported="false" />
+        <activity
             android:name=".lesson2.ImplicitIntentsActivity"
             android:exported="false" />
         <activity

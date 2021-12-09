@@ -9,7 +9,7 @@ import xyz.mmixel.hw2.databinding.ActivityNavBinding
 import xyz.mmixel.hw2.lesson1.*
 import xyz.mmixel.hw2.lesson2.ActivityLifecycleActivity
 import xyz.mmixel.hw2.lesson2.ImplicitIntentsActivity
-import xyz.mmixel.hw2.lesson2.TwoActivitiesActivity
+import xyz.mmixel.hw2.lesson2.activitiesandintents.HelloToastWithIntent
 
 private const val TAG = "NavActivity"
 
@@ -30,7 +30,7 @@ class NavActivity : AppCompatActivity() {
             R.id.helloConstraint -> HelloConstraint::class.java
             R.id.scrollingText -> ScrollingTextActivity::class.java
             R.id.learnToHelpYourself -> LearnToHelpYourselfActivity::class.java
-            R.id.twoActivities -> TwoActivitiesActivity::class.java
+            R.id.twoActivities -> HelloToastWithIntent::class.java
             R.id.activityLifecycle -> ActivityLifecycleActivity::class.java
             R.id.implicitIntents -> ImplicitIntentsActivity::class.java
             else -> {

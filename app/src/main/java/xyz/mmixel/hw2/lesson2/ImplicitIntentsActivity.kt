@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import xyz.mmixel.hw2.R
 
+/**
+ * 2.1: Activities and intents
+ */
 class ImplicitIntentsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
