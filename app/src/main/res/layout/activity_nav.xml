@@ -15,7 +15,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
             tools:context=".NavActivity">
@@ -36,7 +36,7 @@
                 android:text="L1.2 Part A: Your first interactive UI" />
 
             <Button
-                android:id="@+id/helloToastPtB"
+                android:id="@+id/helloConstraint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="@{(v) -> navHandler.navigate(v.id)}"

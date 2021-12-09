@@ -25,7 +25,7 @@
             android:name=".lesson1.ScrollingTextActivity"
             android:exported="false" />
         <activity
-            android:name=".lesson1.HelloToastPtB"
+            android:name=".lesson1.HelloConstraint"
             android:exported="false" />
         <activity
             android:name=".lesson1.HelloToastPtA"

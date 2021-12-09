@@ -27,7 +27,7 @@ class NavActivity : AppCompatActivity() {
         val dst = when (resId) {
             R.id.helloWorld -> HelloWorldActivity::class.java
             R.id.helloToastPtA -> HelloToastPtA::class.java
-            R.id.helloToastPtB -> HelloToastPtB::class.java
+            R.id.helloConstraint -> HelloConstraint::class.java
             R.id.scrollingText -> ScrollingTextActivity::class.java
             R.id.learnToHelpYourself -> LearnToHelpYourselfActivity::class.java
             R.id.twoActivities -> TwoActivitiesActivity::class.java

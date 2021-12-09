@@ -7,4 +7,10 @@
         <item name="android:background">@color/design_default_color_primary</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
+
+    <style name="button_style_tablets" parent="button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">60sp</item>
+    </style>
 </resources>
