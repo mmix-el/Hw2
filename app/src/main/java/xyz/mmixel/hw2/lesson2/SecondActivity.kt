@@ -3,32 +3,36 @@ package xyz.mmixel.hw2.lesson2
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import xyz.mmixel.hw2.R
+import xyz.mmixel.hw2.databinding.ActivitySecondBinding
 
-private val LOG_TAG: String = SecondActivity::class.java.simpleName
-const val EXTRA_REPLY = "com.example.android.twoactivities.extra.REPLY"
+private const val LOG_TAG: String = "SecondActivity"
+const val EXTRA_REPLY = "com.example.android.twoActivities.EXTRA_REPLY"
 
+/**
+ * 2.1 Activities and intents
+ */
 class SecondActivity : AppCompatActivity() {
-    lateinit var reply: EditText
+    private lateinit var binding: ActivitySecondBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
-        val message = intent.getStringExtra(EXTRA_MESSAGE)
-        findViewById<TextView>(R.id.text_message).text = message
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_second)
+        binding.saHandler = this
 
-        reply = findViewById(R.id.editText_second)
-        val button: Button = findViewById(R.id.button_second)
-        button.setOnClickListener {
-            val replyIntent = Intent()
-            replyIntent.putExtra(EXTRA_REPLY, reply.text.toString())
-            setResult(RESULT_OK, replyIntent)
-            Log.d(LOG_TAG, "End SecondActivity");
-            finish()
+        val message = intent.getStringExtra(EXTRA_MESSAGE)
+
+        with(binding) {
+            receivedText.text = message
+            replyButton.setOnClickListener {
+                val replyIntent = Intent()
+                replyIntent.putExtra(EXTRA_REPLY, replyText.text)
+                setResult(RESULT_OK, replyIntent)
+                Log.d(LOG_TAG, "End SecondActivity")
+                finish()
+            }
         }
     }
 
@@ -62,5 +66,4 @@ class SecondActivity : AppCompatActivity() {
         super.onRestart()
         Log.d(LOG_TAG, "onRestart")
     }
-
 }

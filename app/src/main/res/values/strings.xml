@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Hw2</string>
-    <string name="greeting_text">Hello World!</string>
+    <string name="greeting_text">Happy Birthday to Rama!</string>
     <string name="button_label_toast">Toast</string>
     <string name="button_label_count">Count</string>
     <string name="count_initial_value">0</string>
@@ -50,4 +50,33 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
     <string name="text_passage2">text passage 2</string>
     <string name="text_passage3">text passage 3</string>
     <string name="store_address">Grocery Store</string>
+    <string name="HelloWorldActivityLabel">HelloWorldActivity</string>
+    <string name="NavActivityLabel">NavActivity</string>
+    <string name="HelloToastPtALabel">HelloToastPtA</string>
+    <string name="HelloConstraintLabel">HelloConstraint</string>
+    <string name="ScrollingTextActivityLabel">ScrollingTextActivity</string>
+    <string name="LearnToHelpYourselfActivityLabel">LearnToHelpYourselfActivity</string>
+    <string name="ActivityLifecycleActivityLabel">ActivityLifecycleActivity</string>
+    <string name="ImplicitIntentsActivityLabel">ImplicitIntentsActivity</string>
+    <string name="TwoActivitiesLabel">TwoActivities</string>
+    <string name="HelloToastWithIntentLabel">HelloToastWithIntent</string>
+    <string name="HelloToastWithIntentSecondLabel">HelloToastWithIntentSecond</string>
+    <string name="ShopActivityLabel">ShopActivity</string>
+    <string name="CartActivityLabel">CartActivity</string>
+    <string name="OneTwoThreeFirstLabel">OneTwoThreeFirst</string>
+    <string name="OneTwoThreeSecondLabel">OneTwoThreeSecond</string>
+    <string name="hello_label">Hello!</string>
+    <string name="count_label">Count</string>
+    <string name="this_is_an_edit_text">This is an edit text</string>
+    <string name="init_count">0</string>
+    <string name="dst0">L1.1: Android Studio and Hello World</string>
+    <string name="dst1">L1.2 Part A: Your first interactive UI</string>
+    <string name="dst2">L1.2 Part B: The layout editor</string>
+    <string name="dst3">L1.3: Text and scrolling views</string>
+    <string name="dst4">L2.1: Two Activities</string>
+    <string name="dst5">Hello Toast With Intent</string>
+    <string name="dst6">L2.2: Activity lifecycle and state</string>
+    <string name="dst7">L2.3: Implicit intents</string>
+    <string name="dst8">Cart Activity</string>
+    <string name="dst9">Activity And Intents Challenge</string>
 </resources>

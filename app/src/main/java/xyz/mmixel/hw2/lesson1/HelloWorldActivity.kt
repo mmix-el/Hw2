@@ -11,27 +11,27 @@ private const val TAG = "HelloWorldActivity"
  * 1.1: Android Studio and Hello World
  */
 class HelloWorldActivity : AppCompatActivity() {
-    private val friendName = "Rama"
+    private val logMessage = "Hello Log!"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.title = "HelloWorldActivity"
         setContentView(R.layout.activity_hello_world)
-        Log.i(TAG, "Happy Birthday to $friendName")
 
+        // Trigger and log an exception
         try {
             // code that may throw an exception
-            throw Exception("An exception has thrown!")
+            throw Exception("I'm an Exception")
         } catch (e: Exception) {
             // code for handling the exception
-            Log.e(TAG, "Exception logged: ${e.message}")
+            Log.e(TAG, "Exception has logged: ${e.message}")
         }
 
-        val message = "Hello Log!"
-        Log.v(TAG, "Verbose: $message")
-        Log.d(TAG, "Debug: $message")
-        Log.i(TAG, "Info: $message")
-        Log.w(TAG, "Warning: $message")
-        Log.e(TAG, "Error: $message")
-        Log.println(Log.ASSERT, TAG, "Assert: $message")
+        // Log statements for various awareness levels
+        Log.v(TAG, "Verbose: $logMessage")
+        Log.d(TAG, "Debug: $logMessage")
+        Log.i(TAG, "Info: $logMessage")
+        Log.w(TAG, "Warning: $logMessage")
+        Log.e(TAG, "Error: $logMessage")
+        Log.println(Log.ASSERT, TAG, "Assert: $logMessage")
     }
 }

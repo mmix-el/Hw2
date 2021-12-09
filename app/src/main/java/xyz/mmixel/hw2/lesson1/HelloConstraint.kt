@@ -21,24 +21,23 @@ class HelloConstraint : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.title = "HelloConstraint"
         binding =
             DataBindingUtil.setContentView(this, R.layout.activity_hello_constraint)
         binding.hcHandler = this
         buttonColorHandler()
     }
 
-    fun showToast(view: View?) {
+    fun showToast(v: View?) {
         Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT).show()
     }
 
-    fun zeroIn(view: View?) {
+    fun zeroIn(v: View?) {
         count = 0
         binding.showCount.text = count.toString()
         buttonColorHandler()
     }
 
-    fun countUp(view: View?) {
+    fun countUp(v: View?) {
         binding.showCount.text = "${++count}"
         buttonColorHandler()
     }

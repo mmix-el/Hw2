@@ -10,8 +10,8 @@ import androidx.databinding.DataBindingUtil
 import xyz.mmixel.hw2.R
 import xyz.mmixel.hw2.databinding.ActivityShopBinding
 
-const val EXTRA_PICKED_ITEM = "xyz.mmixel.hw2.lesson2.extra.PICKED_ITEM"
-const val EXTRA_INDEX = "xyz.mmixel.hw2.lesson2.extra.INDEX"
+const val EXTRA_PICKED_ITEM = "xyz.mmixel.hw2.lesson2.EXTRA_PICKED_ITEM"
+const val EXTRA_INDEX = "xyz.mmixel.hw2.lesson2.EXTRA_INDEX"
 
 
 class ShopActivity : AppCompatActivity() {

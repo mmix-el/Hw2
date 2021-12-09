@@ -11,21 +11,27 @@
         android:theme="@style/Theme.Hw2" >
         <activity
             android:name=".lesson2.OneTwoThreeSecond"
+            android:label="@string/OneTwoThreeSecondLabel"
             android:exported="false" />
         <activity
             android:name=".lesson2.OneTwoThreeFirst"
+            android:label="@string/OneTwoThreeFirstLabel"
             android:exported="false" />
         <activity
             android:name=".lesson2.CartActivity"
+            android:label="@string/CartActivityLabel"
             android:exported="false" />
         <activity
             android:name=".lesson2.ShopActivity"
+            android:label="@string/ShopActivityLabel"
             android:exported="false" />
         <activity
             android:name=".lesson2.HelloToastWithIntentSecond"
+            android:label="@string/HelloToastWithIntentSecondLabel"
             android:exported="false" />
         <activity
             android:name=".lesson2.HelloToastWithIntent"
+            android:label="@string/HelloToastWithIntentLabel"
             android:exported="false" />
         <activity
             android:name=".lesson2.SecondActivity"
@@ -38,33 +44,35 @@
         </activity>
         <activity
             android:name=".lesson2.TwoActivities"
+            android:label="@string/TwoActivitiesLabel"
             android:exported="false" />
         <activity
             android:name=".lesson2.ImplicitIntentsActivity"
+            android:label="@string/ImplicitIntentsActivityLabel"
             android:exported="false" />
         <activity
             android:name=".lesson2.ActivityLifecycleActivity"
-            android:exported="false" />
-        <activity
-            android:name=".lesson2.TwoActivitiesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".lesson1.LearnToHelpYourselfActivity"
+            android:label="@string/ActivityLifecycleActivityLabel"
             android:exported="false" />
         <activity
             android:name=".lesson1.ScrollingTextActivity"
+            android:label="@string/ScrollingTextActivityLabel"
             android:exported="false" />
         <activity
             android:name=".lesson1.HelloConstraint"
+            android:label="@string/HelloConstraintLabel"
             android:exported="false" />
         <activity
             android:name=".lesson1.HelloToastPtA"
+            android:label="@string/HelloToastPtALabel"
             android:exported="false" />
         <activity
             android:name=".lesson1.HelloWorldActivity"
+            android:label="@string/HelloWorldActivityLabel"
             android:exported="false" />
         <activity
             android:name=".NavActivity"
+            android:label="@string/NavActivityLabel"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

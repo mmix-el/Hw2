@@ -5,63 +5,68 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import xyz.mmixel.hw2.R
+import xyz.mmixel.hw2.databinding.Activity2ActivitiesBinding
 
-
-
-
-private val LOG_TAG: String = TwoActivities::class.java.simpleName
+private const val LOG_TAG: String = "TwoActivities"
 const val EXTRA_MESSAGE = "xyz.mmixel.hw2.lesson2.EXTRA_MESSAGE"
 
+/**
+ * 2.1 Activities and intents
+ */
 class TwoActivities : AppCompatActivity() {
-    private lateinit var messageEditText: EditText
-    private lateinit var replyHeadTextView: TextView
-    private lateinit var replyTextView: TextView
+    private lateinit var binding: Activity2ActivitiesBinding
 
     private val startForResult = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()) { result ->
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val reply: String? = result.data?.getStringExtra(EXTRA_REPLY)
-            replyHeadTextView.visibility = View.VISIBLE
-            replyTextView.text = reply
-            replyTextView.visibility = View.VISIBLE
+            with(binding) {
+                replyHeadTextView.visibility = View.VISIBLE
+                replyTextView.text = reply
+                replyTextView.visibility = View.VISIBLE
+            }
         }
     }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(xyz.mmixel.hw2.R.layout.activity_2_activities)
-
-        messageEditText = findViewById(xyz.mmixel.hw2.R.id.editText_main)
-        replyHeadTextView = findViewById(xyz.mmixel.hw2.R.id.text_header_reply)
-        replyTextView = findViewById(xyz.mmixel.hw2.R.id.text_message_reply)
-
         Log.d(LOG_TAG, "-------")
         Log.d(LOG_TAG, "onCreate")
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_2_activities)
+        binding.taHandler = this
 
         if (savedInstanceState != null) {
             val isVisible = savedInstanceState.getBoolean("reply_visible")
             if (isVisible) {
-                replyHeadTextView.visibility = View.VISIBLE
-                replyTextView.text = savedInstanceState
-                    .getString("reply_text")
-                replyTextView.visibility = View.VISIBLE
+                with(binding) {
+                    replyHeadTextView.visibility = View.VISIBLE
+                    replyTextView.text = savedInstanceState.getString("reply_text")
+                    replyTextView.visibility = View.VISIBLE
+                }
             }
         }
-
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        if (replyHeadTextView.visibility == View.VISIBLE) {
+        if (binding.replyHeadTextView.visibility == View.VISIBLE) {
             outState.putBoolean("reply_visible", true)
-            outState.putString("reply_text",
-                replyTextView.text.toString())
+            outState.putString("reply_text", binding.replyTextView.text.toString())
         }
+    }
+
+    fun launchSecondActivity(v: View?) {
+        Log.d(LOG_TAG, "Button clicked!")
+        val intent = Intent(this, SecondActivity::class.java)
+        intent.putExtra(EXTRA_MESSAGE, binding.replyTextView.text)
+        startForResult.launch(intent)
     }
 
     override fun onStart() {
@@ -93,12 +98,4 @@ class TwoActivities : AppCompatActivity() {
         super.onRestart()
         Log.d(LOG_TAG, "onRestart")
     }
-
-    fun launchSecondActivity(view: View?) {
-        Log.d(LOG_TAG, "Button clicked!")
-        val intent = Intent(this, SecondActivity::class.java)
-        intent.putExtra(EXTRA_MESSAGE, messageEditText.text)
-        startForResult.launch(intent)
-    }
-
 }
