@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import xyz.mmixel.hw2.R
 
 /**
- *  1.1: Android Studio and Hello World
+ * 1.3: Text and scrolling views
  */
 class ScrollingTextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import xyz.mmixel.hw2.R
 
 /**
- *  1.1: Android Studio and Hello World
+ * 1.4: Learn to help yourself
  */
 class LearnToHelpYourselfActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
