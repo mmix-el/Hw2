@@ -21,6 +21,7 @@ class HelloToastPtA : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.title = "HelloToastPtA"
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hello_toast_pt_a)
         binding.htHandler = this
         showCount = binding.showCount

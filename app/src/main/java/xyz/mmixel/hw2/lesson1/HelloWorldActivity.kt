@@ -14,6 +14,7 @@ class HelloWorldActivity : AppCompatActivity() {
     private val friendName = "Rama"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.title = "HelloWorldActivity"
         setContentView(R.layout.activity_hello_world)
         Log.i(TAG, "Happy Birthday to $friendName")
 

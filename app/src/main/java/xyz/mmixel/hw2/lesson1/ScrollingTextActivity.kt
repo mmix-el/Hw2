@@ -10,7 +10,7 @@ import xyz.mmixel.hw2.R
 class ScrollingTextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_scrolling_text)
+        setContentView(R.layout.activity_scrolling_text2)
         supportActionBar?.title = "ScrollingTextActivity"
     }
 }
