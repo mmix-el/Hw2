@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import xyz.mmixel.hw2.databinding.ActivityNavBinding
 import xyz.mmixel.hw2.lesson1.*
 import xyz.mmixel.hw2.lesson2.ActivityLifecycleActivity
+import xyz.mmixel.hw2.lesson2.CartActivity
 import xyz.mmixel.hw2.lesson2.ImplicitIntentsActivity
 import xyz.mmixel.hw2.lesson2.activitiesandintents.HelloToastWithIntent
 
@@ -33,6 +34,7 @@ class NavActivity : AppCompatActivity() {
             R.id.twoActivities -> HelloToastWithIntent::class.java
             R.id.activityLifecycle -> ActivityLifecycleActivity::class.java
             R.id.implicitIntents -> ImplicitIntentsActivity::class.java
+            R.id.cartActivity -> CartActivity::class.java
             else -> {
                 Log.wtf(TAG, "Undefined behavior: resId=$resId!"); null
             }

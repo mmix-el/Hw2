@@ -98,7 +98,7 @@ class TwoActivities : AppCompatActivity() {
         Log.d(LOG_TAG, "Button clicked!")
         val intent = Intent(this, SecondActivity::class.java)
         intent.putExtra(EXTRA_MESSAGE, messageEditText.text)
-        startForResult.launch(Intent(this, SecondActivity::class.java))
+        startForResult.launch(intent)
     }
 
 }

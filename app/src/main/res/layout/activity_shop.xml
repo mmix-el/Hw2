@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shopHandler"
+            type="xyz.mmixel.hw2.lesson2.ShopActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".lesson2.ShopActivity">
+
+            <Button
+                android:id="@+id/applesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Apples" />
+
+            <Button
+                android:id="@+id/breadButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Bread" />
+
+            <Button
+                android:id="@+id/cheeseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Cheese" />
+
+            <Button
+                android:id="@+id/eggsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Eggs" />
+
+            <Button
+                android:id="@+id/milkButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Milk" />
+
+            <Button
+                android:id="@+id/oliveOilButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Olive Oil" />
+
+            <Button
+                android:id="@+id/pastaButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Pasta" />
+
+            <Button
+                android:id="@+id/redBeansButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Red beans" />
+
+            <Button
+                android:id="@+id/riceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Rice" />
+
+            <Button
+                android:id="@+id/turkeyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> shopHandler.pickItem(v.id)}"
+                android:text="Turkey" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

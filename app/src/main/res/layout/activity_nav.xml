@@ -77,6 +77,13 @@
                 android:onClick="@{(v) -> navHandler.navigate(v.id)}"
                 android:text="L2.3: Implicit intents" />
 
+            <Button
+                android:id="@+id/cartActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="Cart Activity" />
+
         </LinearLayout>
     </ScrollView>
 </layout>

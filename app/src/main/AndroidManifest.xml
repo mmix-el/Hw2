@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hw2">
         <activity
+            android:name=".lesson2.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lesson2.ShopActivity"
+            android:exported="false" />
+        <activity
             android:name=".lesson2.activitiesandintents.HelloToastWithIntentSecond"
             android:exported="false" />
         <activity
