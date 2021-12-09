@@ -3,7 +3,6 @@ package xyz.mmixel.hw2.lesson2
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import xyz.mmixel.hw2.R
@@ -16,7 +15,6 @@ const val EXTRA_HELLO_COUNT = "xyz.mmixel.hw2.lesson2.EXTRA_HELLO_COUNT"
  */
 class HelloToastWithIntent : AppCompatActivity() {
     private var count = 0
-    private lateinit var showCount: TextView
     private lateinit var binding: ActivityHelloToastWithIntentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +33,6 @@ class HelloToastWithIntent : AppCompatActivity() {
     }
 
     fun countUp(v: View?) {
-        showCount.text = "${++count}"
+        binding.showCount.text = "${++count}"
     }
 }
