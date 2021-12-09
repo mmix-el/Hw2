@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="navHandler"
+            type="xyz.mmixel.hw2.NavActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:context=".NavActivity">
+
+
+            <Button
+                android:id="@+id/helloWorld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst0" />
+
+            <Button
+                android:id="@+id/helloToastPtA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst1" />
+
+            <Button
+                android:id="@+id/helloConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst2" />
+
+            <Button
+                android:id="@+id/scrollingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst3" />
+
+            <Button
+                android:id="@+id/twoActivities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst4" />
+
+            <Button
+                android:id="@+id/helloToastWithIntent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst5" />
+
+            <Button
+                android:id="@+id/activityLifecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst6" />
+
+            <Button
+                android:id="@+id/implicitIntents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst7" />
+
+            <Button
+                android:id="@+id/cartActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst8" />
+
+            <Button
+                android:id="@+id/oneTwoThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v) -> navHandler.navigate(v.id)}"
+                android:text="@string/dst9" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
